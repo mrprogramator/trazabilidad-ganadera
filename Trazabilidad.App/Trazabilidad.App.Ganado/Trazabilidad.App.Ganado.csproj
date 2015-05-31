@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{152FBACE-5180-4D13-BA3E-825F1E0863E8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Trazabilidad.App.Ganado</RootNamespace>
+    <AssemblyName>Trazabilidad.App.Ganado</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aplicacion\Items\CompradoItemListener.cs" />
+    <Compile Include="Aplicacion\Adaptadores\CompradoPropertyListenerAdaptador.cs" />
+    <Compile Include="Aplicacion\FactoriaAplicaciones.cs" />
+    <Compile Include="Aplicacion\Items\GanadoItemListener.cs" />
+    <Compile Include="Aplicacion\Interfaces\IFactoriaAplicaciones.cs" />
+    <Compile Include="Aplicacion\Interfaces\IGanadoPropertyListenerAdaptador.cs" />
+    <Compile Include="Aplicacion\Adaptadores\MuertoPropertyListenerAdaptador.cs" />
+    <Compile Include="Aplicacion\Items\NacidoItemListener.cs" />
+    <Compile Include="Aplicacion\Listas\GanadoPropertyListener.cs" />
+    <Compile Include="Aplicacion\Adaptadores\GanadoPropertyListenerAdaptador.cs" />
+    <Compile Include="Aplicacion\Items\MuertoItemListener.cs" />
+    <Compile Include="Aplicacion\Adaptadores\NacidoPropertyListenerAdaptador.cs" />
+    <Compile Include="Aplicacion\Items\VendidoItemListener.cs" />
+    <Compile Include="Aplicacion\Adaptadores\VendidoPropertyListenerAdaptador.cs" />
+    <Compile Include="Dominio\Bovino.cs" />
+    <Compile Include="Dominio\BovinoComprado.cs" />
+    <Compile Include="Dominio\BovinoMuerto.cs" />
+    <Compile Include="Dominio\BovinoNacido.cs" />
+    <Compile Include="Dominio\BovinoVendido.cs" />
+    <Compile Include="Dominio\Compra.cs" />
+    <Compile Include="Dominio\Entrada.cs" />
+    <Compile Include="Dominio\Muerte.cs" />
+    <Compile Include="Dominio\Nacimiento.cs" />
+    <Compile Include="Dominio\Salida.cs" />
+    <Compile Include="Dominio\Venta.cs" />
+    <Compile Include="GUI\FormSalidaController.cs" />
+    <Compile Include="GUI\FormEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormEntrada.Designer.cs">
+      <DependentUpon>FormEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormEntradaController.cs" />
+    <Compile Include="GUI\FormGanadoListaController.cs" />
+    <Compile Include="GUI\FormGanadoLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormGanadoLista.Designer.cs">
+      <DependentUpon>FormGanadoLista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormSalida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormSalida.Designer.cs">
+      <DependentUpon>FormSalida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios\Adaptadores\BovinoAdaptadorBaseDeDatos.cs" />
+    <Compile Include="Servicios\Adaptadores\BovinoCompradoAdaptadorBaseDeDatos.cs" />
+    <Compile Include="Servicios\Adaptadores\BovinoMuertoAdaptadorBaseDeDatos.cs" />
+    <Compile Include="Servicios\Adaptadores\BovinoNacidoAdaptadorBaseDeDatos.cs" />
+    <Compile Include="Servicios\Adaptadores\BovinoVendidoAdaptadorBaseDeDatos.cs" />
+    <Compile Include="Servicios\FactoriaServiciosLocales.cs" />
+    <Compile Include="Servicios\Interfaces\IAdaptador.cs" />
+    <Compile Include="Servicios\Interfaces\IFactoriaServicios.cs" />
+    <Compile Include="Servicios\Listas\Lista.cs" />
+    <EmbeddedResource Include="GUI\FormEntrada.resx">
+      <DependentUpon>FormEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormGanadoLista.es.resx">
+      <DependentUpon>FormGanadoLista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormGanadoLista.resx">
+      <DependentUpon>FormGanadoLista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormSalida.resx">
+      <DependentUpon>FormSalida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Trazabilidad.App.Categoria\Trazabilidad.App.Categorias.csproj">
+      <Project>{af91d5b4-4fd7-4d9e-bb01-904307c93f77}</Project>
+      <Name>Trazabilidad.App.Categorias</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Trazabilidad.App.Datos\Trazabilidad.App.Datos.csproj">
+      <Project>{28050125-1fae-4065-a697-7506b512efed}</Project>
+      <Name>Trazabilidad.App.Datos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

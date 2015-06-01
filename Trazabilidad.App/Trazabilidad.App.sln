@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trazabilidad.App.Datos", "T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trazabilidad.App.Categorias", "Trazabilidad.App.Categoria\Trazabilidad.App.Categorias.csproj", "{AF91D5B4-4FD7-4D9E-BB01-904307C93F77}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trazabilidad.App.Sanidad", "Trazabilidad.App.Sanidad\Trazabilidad.App.Sanidad.csproj", "{457096A1-1276-49A3-822C-8E21A2DFFC72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{AF91D5B4-4FD7-4D9E-BB01-904307C93F77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF91D5B4-4FD7-4D9E-BB01-904307C93F77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF91D5B4-4FD7-4D9E-BB01-904307C93F77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{457096A1-1276-49A3-822C-8E21A2DFFC72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{457096A1-1276-49A3-822C-8E21A2DFFC72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{457096A1-1276-49A3-822C-8E21A2DFFC72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{457096A1-1276-49A3-822C-8E21A2DFFC72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

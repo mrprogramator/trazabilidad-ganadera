@@ -68,6 +68,15 @@ namespace Trazabilidad.App.Ganado.GUI
         {
             _ComboBox.Items.Clear();
 
+            if (TipoBovino == null)
+            {
+                var _PropertyListener = FactoriaAplicaciones<GanadoItemListener>.GetInstance().GetAplicacion().GetAll();
+                foreach (var bovino in _PropertyListener)
+                {
+                    _ComboBox.Items.Add(bovino.Id);
+                }
+            }
+
             if (TipoBovino is NacidoItemListener)
             {
                 var _PropertyListener = FactoriaAplicaciones<NacidoItemListener>.GetInstance().GetAplicacion().GetAll();

@@ -4,17 +4,17 @@
 
 -- Dumped from database version 9.4.2
 -- Dumped by pg_dump version 9.4.2
--- Started on 2015-05-31 00:09:34 BOT
+-- Started on 2015-06-01 02:46:49 BOT
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
-SET client_encoding = 'SQL_ASCII';
+SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SET check_function_bodies = false;
 SET client_min_messages = warning;
 
 --
--- TOC entry 196 (class 3079 OID 11862)
+-- TOC entry 198 (class 3079 OID 11862)
 -- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
 --
 
@@ -22,8 +22,8 @@ CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 
 
 --
--- TOC entry 2148 (class 0 OID 0)
--- Dependencies: 196
+-- TOC entry 2161 (class 0 OID 0)
+-- Dependencies: 198
 -- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
 --
 
@@ -69,7 +69,7 @@ CREATE SEQUENCE bovino_id_seq
 ALTER TABLE bovino_id_seq OWNER TO ganaderia;
 
 --
--- TOC entry 2149 (class 0 OID 0)
+-- TOC entry 2162 (class 0 OID 0)
 -- Dependencies: 176
 -- Name: bovino_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ganaderia
 --
@@ -108,7 +108,7 @@ CREATE SEQUENCE categoria_id_seq
 ALTER TABLE categoria_id_seq OWNER TO ganaderia;
 
 --
--- TOC entry 2150 (class 0 OID 0)
+-- TOC entry 2163 (class 0 OID 0)
 -- Dependencies: 172
 -- Name: categoria_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ganaderia
 --
@@ -148,7 +148,7 @@ CREATE SEQUENCE compra_id_seq
 ALTER TABLE compra_id_seq OWNER TO ganaderia;
 
 --
--- TOC entry 2151 (class 0 OID 0)
+-- TOC entry 2164 (class 0 OID 0)
 -- Dependencies: 180
 -- Name: compra_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ganaderia
 --
@@ -186,7 +186,7 @@ CREATE SEQUENCE estancia_id_seq
 ALTER TABLE estancia_id_seq OWNER TO ganaderia;
 
 --
--- TOC entry 2152 (class 0 OID 0)
+-- TOC entry 2165 (class 0 OID 0)
 -- Dependencies: 174
 -- Name: estancia_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ganaderia
 --
@@ -226,7 +226,7 @@ CREATE SEQUENCE inseminacion_id_seq
 ALTER TABLE inseminacion_id_seq OWNER TO ganaderia;
 
 --
--- TOC entry 2153 (class 0 OID 0)
+-- TOC entry 2166 (class 0 OID 0)
 -- Dependencies: 182
 -- Name: inseminacion_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ganaderia
 --
@@ -265,7 +265,7 @@ CREATE SEQUENCE muerte_id2_seq
 ALTER TABLE muerte_id2_seq OWNER TO luigi;
 
 --
--- TOC entry 2154 (class 0 OID 0)
+-- TOC entry 2167 (class 0 OID 0)
 -- Dependencies: 194
 -- Name: muerte_id2_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: luigi
 --
@@ -304,7 +304,7 @@ CREATE SEQUENCE nacimiento_id_seq
 ALTER TABLE nacimiento_id_seq OWNER TO ganaderia;
 
 --
--- TOC entry 2155 (class 0 OID 0)
+-- TOC entry 2168 (class 0 OID 0)
 -- Dependencies: 178
 -- Name: nacimiento_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ganaderia
 --
@@ -323,7 +323,6 @@ CREATE TABLE palpacion (
     numero integer,
     mes_gestacion integer,
     estado boolean,
-    observaciones text,
     bovino_id integer
 );
 
@@ -346,7 +345,7 @@ CREATE SEQUENCE palpacion_id_seq
 ALTER TABLE palpacion_id_seq OWNER TO ganaderia;
 
 --
--- TOC entry 2156 (class 0 OID 0)
+-- TOC entry 2169 (class 0 OID 0)
 -- Dependencies: 184
 -- Name: palpacion_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ganaderia
 --
@@ -387,7 +386,7 @@ CREATE SEQUENCE parto_id_seq
 ALTER TABLE parto_id_seq OWNER TO ganaderia;
 
 --
--- TOC entry 2157 (class 0 OID 0)
+-- TOC entry 2170 (class 0 OID 0)
 -- Dependencies: 188
 -- Name: parto_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ganaderia
 --
@@ -426,7 +425,7 @@ CREATE SEQUENCE peso_id_seq
 ALTER TABLE peso_id_seq OWNER TO ganaderia;
 
 --
--- TOC entry 2158 (class 0 OID 0)
+-- TOC entry 2171 (class 0 OID 0)
 -- Dependencies: 190
 -- Name: peso_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ganaderia
 --
@@ -442,7 +441,7 @@ ALTER SEQUENCE peso_id_seq OWNED BY peso.id;
 CREATE TABLE "preñado" (
     id integer NOT NULL,
     fecha date,
-    ganado_id integer,
+    bovino_id integer,
     observaciones text
 );
 
@@ -465,12 +464,52 @@ CREATE SEQUENCE "preñado_id_seq"
 ALTER TABLE "preñado_id_seq" OWNER TO ganaderia;
 
 --
--- TOC entry 2159 (class 0 OID 0)
+-- TOC entry 2172 (class 0 OID 0)
 -- Dependencies: 187
 -- Name: preñado_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ganaderia
 --
 
 ALTER SEQUENCE "preñado_id_seq" OWNED BY "preñado".id;
+
+
+--
+-- TOC entry 197 (class 1259 OID 27342)
+-- Name: vacuna; Type: TABLE; Schema: public; Owner: luigi; Tablespace: 
+--
+
+CREATE TABLE vacuna (
+    id integer NOT NULL,
+    fecha date,
+    bovino_id integer,
+    nombre text,
+    dosis numeric
+);
+
+
+ALTER TABLE vacuna OWNER TO luigi;
+
+--
+-- TOC entry 196 (class 1259 OID 27340)
+-- Name: vacuna_id_seq; Type: SEQUENCE; Schema: public; Owner: luigi
+--
+
+CREATE SEQUENCE vacuna_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE vacuna_id_seq OWNER TO luigi;
+
+--
+-- TOC entry 2173 (class 0 OID 0)
+-- Dependencies: 196
+-- Name: vacuna_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: luigi
+--
+
+ALTER SEQUENCE vacuna_id_seq OWNED BY vacuna.id;
 
 
 --
@@ -506,7 +545,7 @@ CREATE SEQUENCE venta_id_seq
 ALTER TABLE venta_id_seq OWNER TO luigi;
 
 --
--- TOC entry 2160 (class 0 OID 0)
+-- TOC entry 2174 (class 0 OID 0)
 -- Dependencies: 195
 -- Name: venta_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: luigi
 --
@@ -515,7 +554,7 @@ ALTER SEQUENCE venta_id_seq OWNED BY venta.id;
 
 
 --
--- TOC entry 1964 (class 2604 OID 25029)
+-- TOC entry 1971 (class 2604 OID 25029)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: ganaderia
 --
 
@@ -523,7 +562,7 @@ ALTER TABLE ONLY bovino ALTER COLUMN id SET DEFAULT nextval('bovino_id_seq'::reg
 
 
 --
--- TOC entry 1962 (class 2604 OID 25007)
+-- TOC entry 1969 (class 2604 OID 25007)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: ganaderia
 --
 
@@ -531,7 +570,7 @@ ALTER TABLE ONLY categoria ALTER COLUMN id SET DEFAULT nextval('categoria_id_seq
 
 
 --
--- TOC entry 1966 (class 2604 OID 25063)
+-- TOC entry 1973 (class 2604 OID 25063)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: ganaderia
 --
 
@@ -539,7 +578,7 @@ ALTER TABLE ONLY compra ALTER COLUMN id SET DEFAULT nextval('compra_id_seq'::reg
 
 
 --
--- TOC entry 1963 (class 2604 OID 25018)
+-- TOC entry 1970 (class 2604 OID 25018)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: ganaderia
 --
 
@@ -547,7 +586,7 @@ ALTER TABLE ONLY estancia ALTER COLUMN id SET DEFAULT nextval('estancia_id_seq':
 
 
 --
--- TOC entry 1967 (class 2604 OID 25079)
+-- TOC entry 1974 (class 2604 OID 25079)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: ganaderia
 --
 
@@ -555,7 +594,7 @@ ALTER TABLE ONLY inseminacion ALTER COLUMN id SET DEFAULT nextval('inseminacion_
 
 
 --
--- TOC entry 1972 (class 2604 OID 27311)
+-- TOC entry 1979 (class 2604 OID 27311)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: luigi
 --
 
@@ -563,7 +602,7 @@ ALTER TABLE ONLY muerte ALTER COLUMN id SET DEFAULT nextval('muerte_id2_seq'::re
 
 
 --
--- TOC entry 1965 (class 2604 OID 25047)
+-- TOC entry 1972 (class 2604 OID 25047)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: ganaderia
 --
 
@@ -571,7 +610,7 @@ ALTER TABLE ONLY nacimiento ALTER COLUMN id SET DEFAULT nextval('nacimiento_id_s
 
 
 --
--- TOC entry 1968 (class 2604 OID 25100)
+-- TOC entry 1975 (class 2604 OID 25100)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: ganaderia
 --
 
@@ -579,7 +618,7 @@ ALTER TABLE ONLY palpacion ALTER COLUMN id SET DEFAULT nextval('palpacion_id_seq
 
 
 --
--- TOC entry 1970 (class 2604 OID 25136)
+-- TOC entry 1977 (class 2604 OID 25136)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: ganaderia
 --
 
@@ -587,7 +626,7 @@ ALTER TABLE ONLY parto ALTER COLUMN id SET DEFAULT nextval('parto_id_seq'::regcl
 
 
 --
--- TOC entry 1971 (class 2604 OID 27242)
+-- TOC entry 1978 (class 2604 OID 27242)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: ganaderia
 --
 
@@ -595,7 +634,7 @@ ALTER TABLE ONLY peso ALTER COLUMN id SET DEFAULT nextval('peso_id_seq'::regclas
 
 
 --
--- TOC entry 1969 (class 2604 OID 25116)
+-- TOC entry 1976 (class 2604 OID 25116)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: ganaderia
 --
 
@@ -603,7 +642,15 @@ ALTER TABLE ONLY "preñado" ALTER COLUMN id SET DEFAULT nextval('"preñado_id_se
 
 
 --
--- TOC entry 1973 (class 2604 OID 27320)
+-- TOC entry 1981 (class 2604 OID 27345)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: luigi
+--
+
+ALTER TABLE ONLY vacuna ALTER COLUMN id SET DEFAULT nextval('vacuna_id_seq'::regclass);
+
+
+--
+-- TOC entry 1980 (class 2604 OID 27320)
 -- Name: id; Type: DEFAULT; Schema: public; Owner: luigi
 --
 
@@ -611,7 +658,7 @@ ALTER TABLE ONLY venta ALTER COLUMN id SET DEFAULT nextval('venta_id_seq'::regcl
 
 
 --
--- TOC entry 2122 (class 0 OID 25026)
+-- TOC entry 2133 (class 0 OID 25026)
 -- Dependencies: 177
 -- Data for Name: bovino; Type: TABLE DATA; Schema: public; Owner: ganaderia
 --
@@ -626,7 +673,7 @@ COPY bovino (id, madre_id, padre_id, categoria_id, entrada, salida) FROM stdin;
 
 
 --
--- TOC entry 2161 (class 0 OID 0)
+-- TOC entry 2175 (class 0 OID 0)
 -- Dependencies: 176
 -- Name: bovino_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ganaderia
 --
@@ -635,7 +682,7 @@ SELECT pg_catalog.setval('bovino_id_seq', 6, false);
 
 
 --
--- TOC entry 2118 (class 0 OID 25004)
+-- TOC entry 2129 (class 0 OID 25004)
 -- Dependencies: 173
 -- Data for Name: categoria; Type: TABLE DATA; Schema: public; Owner: ganaderia
 --
@@ -650,7 +697,7 @@ COPY categoria (id, nombre, descripcion, sexo) FROM stdin;
 
 
 --
--- TOC entry 2162 (class 0 OID 0)
+-- TOC entry 2176 (class 0 OID 0)
 -- Dependencies: 172
 -- Name: categoria_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ganaderia
 --
@@ -659,7 +706,7 @@ SELECT pg_catalog.setval('categoria_id_seq', 5, true);
 
 
 --
--- TOC entry 2126 (class 0 OID 25060)
+-- TOC entry 2137 (class 0 OID 25060)
 -- Dependencies: 181
 -- Data for Name: compra; Type: TABLE DATA; Schema: public; Owner: ganaderia
 --
@@ -672,7 +719,7 @@ COPY compra (id, bovino_id, fecha, observaciones, precio) FROM stdin;
 
 
 --
--- TOC entry 2163 (class 0 OID 0)
+-- TOC entry 2177 (class 0 OID 0)
 -- Dependencies: 180
 -- Name: compra_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ganaderia
 --
@@ -681,7 +728,7 @@ SELECT pg_catalog.setval('compra_id_seq', 4, true);
 
 
 --
--- TOC entry 2120 (class 0 OID 25015)
+-- TOC entry 2131 (class 0 OID 25015)
 -- Dependencies: 175
 -- Data for Name: estancia; Type: TABLE DATA; Schema: public; Owner: ganaderia
 --
@@ -692,7 +739,7 @@ COPY estancia (id, nombre, direccion) FROM stdin;
 
 
 --
--- TOC entry 2164 (class 0 OID 0)
+-- TOC entry 2178 (class 0 OID 0)
 -- Dependencies: 174
 -- Name: estancia_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ganaderia
 --
@@ -701,18 +748,18 @@ SELECT pg_catalog.setval('estancia_id_seq', 1, true);
 
 
 --
--- TOC entry 2128 (class 0 OID 25076)
+-- TOC entry 2139 (class 0 OID 25076)
 -- Dependencies: 183
 -- Data for Name: inseminacion; Type: TABLE DATA; Schema: public; Owner: ganaderia
 --
 
 COPY inseminacion (id, fecha, padre_id, madre_id, observaciones) FROM stdin;
-1	2013-07-13	2	1	\N
+1	2013-07-13	2	1	Las espectativas están altas
 \.
 
 
 --
--- TOC entry 2165 (class 0 OID 0)
+-- TOC entry 2179 (class 0 OID 0)
 -- Dependencies: 182
 -- Name: inseminacion_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ganaderia
 --
@@ -721,7 +768,7 @@ SELECT pg_catalog.setval('inseminacion_id_seq', 1, true);
 
 
 --
--- TOC entry 2137 (class 0 OID 27289)
+-- TOC entry 2148 (class 0 OID 27289)
 -- Dependencies: 192
 -- Data for Name: muerte; Type: TABLE DATA; Schema: public; Owner: luigi
 --
@@ -732,7 +779,7 @@ COPY muerte (fecha, bovino_id, causa, id) FROM stdin;
 
 
 --
--- TOC entry 2166 (class 0 OID 0)
+-- TOC entry 2180 (class 0 OID 0)
 -- Dependencies: 194
 -- Name: muerte_id2_seq; Type: SEQUENCE SET; Schema: public; Owner: luigi
 --
@@ -741,7 +788,7 @@ SELECT pg_catalog.setval('muerte_id2_seq', 1, true);
 
 
 --
--- TOC entry 2124 (class 0 OID 25044)
+-- TOC entry 2135 (class 0 OID 25044)
 -- Dependencies: 179
 -- Data for Name: nacimiento; Type: TABLE DATA; Schema: public; Owner: ganaderia
 --
@@ -753,7 +800,7 @@ COPY nacimiento (id, bovino_id, fecha, observaciones) FROM stdin;
 
 
 --
--- TOC entry 2167 (class 0 OID 0)
+-- TOC entry 2181 (class 0 OID 0)
 -- Dependencies: 178
 -- Name: nacimiento_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ganaderia
 --
@@ -762,25 +809,25 @@ SELECT pg_catalog.setval('nacimiento_id_seq', 3, false);
 
 
 --
--- TOC entry 2130 (class 0 OID 25097)
+-- TOC entry 2141 (class 0 OID 25097)
 -- Dependencies: 185
 -- Data for Name: palpacion; Type: TABLE DATA; Schema: public; Owner: ganaderia
 --
 
-COPY palpacion (id, fecha, numero, mes_gestacion, estado, observaciones, bovino_id) FROM stdin;
-1	2013-08-25	1	\N	f	no está preñada	1
-2	2013-09-15	2	\N	t	está preñada	1
-3	2013-10-10	3	1	t	\N	1
-4	2013-11-05	4	2	t	\N	1
-5	2013-12-20	5	3	t	\N	1
-6	2014-01-16	6	4	t	\N	1
-7	2014-02-13	7	5	t	\N	1
-8	2014-04-17	8	9	t	\N	1
+COPY palpacion (id, fecha, numero, mes_gestacion, estado, bovino_id) FROM stdin;
+1	2013-08-25	1	0	f	1
+2	2013-09-15	2	0	t	1
+3	2013-10-10	3	1	t	1
+4	2013-11-05	4	2	t	1
+5	2013-12-20	5	3	t	1
+6	2014-01-16	6	4	t	1
+7	2014-02-13	7	5	t	1
+8	2014-04-17	8	9	t	1
 \.
 
 
 --
--- TOC entry 2168 (class 0 OID 0)
+-- TOC entry 2182 (class 0 OID 0)
 -- Dependencies: 184
 -- Name: palpacion_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ganaderia
 --
@@ -789,7 +836,7 @@ SELECT pg_catalog.setval('palpacion_id_seq', 8, true);
 
 
 --
--- TOC entry 2134 (class 0 OID 25133)
+-- TOC entry 2145 (class 0 OID 25133)
 -- Dependencies: 189
 -- Data for Name: parto; Type: TABLE DATA; Schema: public; Owner: ganaderia
 --
@@ -800,7 +847,7 @@ COPY parto (id, fecha, resultado, bovino_id, "preñado_id", observaciones) FROM 
 
 
 --
--- TOC entry 2169 (class 0 OID 0)
+-- TOC entry 2183 (class 0 OID 0)
 -- Dependencies: 188
 -- Name: parto_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ganaderia
 --
@@ -809,7 +856,7 @@ SELECT pg_catalog.setval('parto_id_seq', 1, true);
 
 
 --
--- TOC entry 2136 (class 0 OID 27239)
+-- TOC entry 2147 (class 0 OID 27239)
 -- Dependencies: 191
 -- Data for Name: peso; Type: TABLE DATA; Schema: public; Owner: ganaderia
 --
@@ -822,7 +869,7 @@ COPY peso (id, fecha, peso, bovino_id) FROM stdin;
 
 
 --
--- TOC entry 2170 (class 0 OID 0)
+-- TOC entry 2184 (class 0 OID 0)
 -- Dependencies: 190
 -- Name: peso_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ganaderia
 --
@@ -831,18 +878,18 @@ SELECT pg_catalog.setval('peso_id_seq', 3, true);
 
 
 --
--- TOC entry 2131 (class 0 OID 25111)
+-- TOC entry 2142 (class 0 OID 25111)
 -- Dependencies: 186
 -- Data for Name: preñado; Type: TABLE DATA; Schema: public; Owner: ganaderia
 --
 
-COPY "preñado" (id, fecha, ganado_id, observaciones) FROM stdin;
+COPY "preñado" (id, fecha, bovino_id, observaciones) FROM stdin;
 1	2013-09-15	1	\N
 \.
 
 
 --
--- TOC entry 2171 (class 0 OID 0)
+-- TOC entry 2185 (class 0 OID 0)
 -- Dependencies: 187
 -- Name: preñado_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ganaderia
 --
@@ -851,7 +898,27 @@ SELECT pg_catalog.setval('"preñado_id_seq"', 1, true);
 
 
 --
--- TOC entry 2138 (class 0 OID 27295)
+-- TOC entry 2153 (class 0 OID 27342)
+-- Dependencies: 197
+-- Data for Name: vacuna; Type: TABLE DATA; Schema: public; Owner: luigi
+--
+
+COPY vacuna (id, fecha, bovino_id, nombre, dosis) FROM stdin;
+1	2015-06-01	1	Antiparasitaria	1
+\.
+
+
+--
+-- TOC entry 2186 (class 0 OID 0)
+-- Dependencies: 196
+-- Name: vacuna_id_seq; Type: SEQUENCE SET; Schema: public; Owner: luigi
+--
+
+SELECT pg_catalog.setval('vacuna_id_seq', 1, true);
+
+
+--
+-- TOC entry 2149 (class 0 OID 27295)
 -- Dependencies: 193
 -- Data for Name: venta; Type: TABLE DATA; Schema: public; Owner: luigi
 --
@@ -862,7 +929,7 @@ COPY venta (fecha, bovino_id, destino, precio, observaciones, id) FROM stdin;
 
 
 --
--- TOC entry 2172 (class 0 OID 0)
+-- TOC entry 2187 (class 0 OID 0)
 -- Dependencies: 195
 -- Name: venta_id_seq; Type: SEQUENCE SET; Schema: public; Owner: luigi
 --
@@ -871,7 +938,7 @@ SELECT pg_catalog.setval('venta_id_seq', 1, true);
 
 
 --
--- TOC entry 1975 (class 2606 OID 25012)
+-- TOC entry 1983 (class 2606 OID 25012)
 -- Name: pk_categoria; Type: CONSTRAINT; Schema: public; Owner: ganaderia; Tablespace: 
 --
 
@@ -880,7 +947,7 @@ ALTER TABLE ONLY categoria
 
 
 --
--- TOC entry 1983 (class 2606 OID 25068)
+-- TOC entry 1991 (class 2606 OID 25068)
 -- Name: pk_compra; Type: CONSTRAINT; Schema: public; Owner: ganaderia; Tablespace: 
 --
 
@@ -889,7 +956,7 @@ ALTER TABLE ONLY compra
 
 
 --
--- TOC entry 1977 (class 2606 OID 25023)
+-- TOC entry 1985 (class 2606 OID 25023)
 -- Name: pk_estancia; Type: CONSTRAINT; Schema: public; Owner: ganaderia; Tablespace: 
 --
 
@@ -898,7 +965,7 @@ ALTER TABLE ONLY estancia
 
 
 --
--- TOC entry 1979 (class 2606 OID 25031)
+-- TOC entry 1987 (class 2606 OID 25031)
 -- Name: pk_ganado; Type: CONSTRAINT; Schema: public; Owner: ganaderia; Tablespace: 
 --
 
@@ -907,7 +974,7 @@ ALTER TABLE ONLY bovino
 
 
 --
--- TOC entry 1985 (class 2606 OID 25084)
+-- TOC entry 1993 (class 2606 OID 25084)
 -- Name: pk_inseminacion; Type: CONSTRAINT; Schema: public; Owner: ganaderia; Tablespace: 
 --
 
@@ -916,7 +983,7 @@ ALTER TABLE ONLY inseminacion
 
 
 --
--- TOC entry 1995 (class 2606 OID 27328)
+-- TOC entry 2003 (class 2606 OID 27328)
 -- Name: pk_muerte; Type: CONSTRAINT; Schema: public; Owner: luigi; Tablespace: 
 --
 
@@ -925,7 +992,7 @@ ALTER TABLE ONLY muerte
 
 
 --
--- TOC entry 1981 (class 2606 OID 25052)
+-- TOC entry 1989 (class 2606 OID 25052)
 -- Name: pk_nacimiento; Type: CONSTRAINT; Schema: public; Owner: ganaderia; Tablespace: 
 --
 
@@ -934,7 +1001,7 @@ ALTER TABLE ONLY nacimiento
 
 
 --
--- TOC entry 1987 (class 2606 OID 25105)
+-- TOC entry 1995 (class 2606 OID 25105)
 -- Name: pk_palpacion; Type: CONSTRAINT; Schema: public; Owner: ganaderia; Tablespace: 
 --
 
@@ -943,7 +1010,7 @@ ALTER TABLE ONLY palpacion
 
 
 --
--- TOC entry 1991 (class 2606 OID 25141)
+-- TOC entry 1999 (class 2606 OID 25141)
 -- Name: pk_parto; Type: CONSTRAINT; Schema: public; Owner: ganaderia; Tablespace: 
 --
 
@@ -952,7 +1019,7 @@ ALTER TABLE ONLY parto
 
 
 --
--- TOC entry 1993 (class 2606 OID 27244)
+-- TOC entry 2001 (class 2606 OID 27244)
 -- Name: pk_peso; Type: CONSTRAINT; Schema: public; Owner: ganaderia; Tablespace: 
 --
 
@@ -961,7 +1028,7 @@ ALTER TABLE ONLY peso
 
 
 --
--- TOC entry 1989 (class 2606 OID 25124)
+-- TOC entry 1997 (class 2606 OID 25124)
 -- Name: pk_preñado; Type: CONSTRAINT; Schema: public; Owner: ganaderia; Tablespace: 
 --
 
@@ -970,7 +1037,7 @@ ALTER TABLE ONLY "preñado"
 
 
 --
--- TOC entry 1997 (class 2606 OID 27330)
+-- TOC entry 2005 (class 2606 OID 27330)
 -- Name: pk_venta; Type: CONSTRAINT; Schema: public; Owner: luigi; Tablespace: 
 --
 
@@ -979,7 +1046,16 @@ ALTER TABLE ONLY venta
 
 
 --
--- TOC entry 1998 (class 2606 OID 25032)
+-- TOC entry 2007 (class 2606 OID 27350)
+-- Name: vacuna_pkey; Type: CONSTRAINT; Schema: public; Owner: luigi; Tablespace: 
+--
+
+ALTER TABLE ONLY vacuna
+    ADD CONSTRAINT vacuna_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 2008 (class 2606 OID 25032)
 -- Name: fk_categoria; Type: FK CONSTRAINT; Schema: public; Owner: ganaderia
 --
 
@@ -988,7 +1064,7 @@ ALTER TABLE ONLY bovino
 
 
 --
--- TOC entry 1999 (class 2606 OID 25053)
+-- TOC entry 2009 (class 2606 OID 25053)
 -- Name: fk_ganado; Type: FK CONSTRAINT; Schema: public; Owner: ganaderia
 --
 
@@ -997,7 +1073,7 @@ ALTER TABLE ONLY nacimiento
 
 
 --
--- TOC entry 2000 (class 2606 OID 25069)
+-- TOC entry 2010 (class 2606 OID 25069)
 -- Name: fk_ganado; Type: FK CONSTRAINT; Schema: public; Owner: ganaderia
 --
 
@@ -1006,7 +1082,7 @@ ALTER TABLE ONLY compra
 
 
 --
--- TOC entry 2003 (class 2606 OID 25106)
+-- TOC entry 2013 (class 2606 OID 25106)
 -- Name: fk_ganado; Type: FK CONSTRAINT; Schema: public; Owner: ganaderia
 --
 
@@ -1015,7 +1091,7 @@ ALTER TABLE ONLY palpacion
 
 
 --
--- TOC entry 2005 (class 2606 OID 25142)
+-- TOC entry 2015 (class 2606 OID 25142)
 -- Name: fk_ganado; Type: FK CONSTRAINT; Schema: public; Owner: ganaderia
 --
 
@@ -1024,7 +1100,7 @@ ALTER TABLE ONLY parto
 
 
 --
--- TOC entry 2007 (class 2606 OID 27245)
+-- TOC entry 2017 (class 2606 OID 27245)
 -- Name: fk_ganado; Type: FK CONSTRAINT; Schema: public; Owner: ganaderia
 --
 
@@ -1033,7 +1109,7 @@ ALTER TABLE ONLY peso
 
 
 --
--- TOC entry 2002 (class 2606 OID 25090)
+-- TOC entry 2012 (class 2606 OID 25090)
 -- Name: fk_madre; Type: FK CONSTRAINT; Schema: public; Owner: ganaderia
 --
 
@@ -1042,7 +1118,7 @@ ALTER TABLE ONLY inseminacion
 
 
 --
--- TOC entry 2001 (class 2606 OID 25085)
+-- TOC entry 2011 (class 2606 OID 25085)
 -- Name: fk_padre; Type: FK CONSTRAINT; Schema: public; Owner: ganaderia
 --
 
@@ -1051,7 +1127,7 @@ ALTER TABLE ONLY inseminacion
 
 
 --
--- TOC entry 2006 (class 2606 OID 25147)
+-- TOC entry 2016 (class 2606 OID 25147)
 -- Name: fk_preñado; Type: FK CONSTRAINT; Schema: public; Owner: ganaderia
 --
 
@@ -1060,16 +1136,25 @@ ALTER TABLE ONLY parto
 
 
 --
--- TOC entry 2004 (class 2606 OID 25125)
+-- TOC entry 2014 (class 2606 OID 25125)
 -- Name: fk_vaca; Type: FK CONSTRAINT; Schema: public; Owner: ganaderia
 --
 
 ALTER TABLE ONLY "preñado"
-    ADD CONSTRAINT fk_vaca FOREIGN KEY (ganado_id) REFERENCES bovino(id);
+    ADD CONSTRAINT fk_vaca FOREIGN KEY (bovino_id) REFERENCES bovino(id);
 
 
 --
--- TOC entry 2147 (class 0 OID 0)
+-- TOC entry 2018 (class 2606 OID 27351)
+-- Name: vacuna_bovino_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: luigi
+--
+
+ALTER TABLE ONLY vacuna
+    ADD CONSTRAINT vacuna_bovino_id_fkey FOREIGN KEY (bovino_id) REFERENCES bovino(id);
+
+
+--
+-- TOC entry 2160 (class 0 OID 0)
 -- Dependencies: 5
 -- Name: public; Type: ACL; Schema: -; Owner: postgres
 --
@@ -1080,7 +1165,7 @@ GRANT ALL ON SCHEMA public TO postgres;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
--- Completed on 2015-05-31 00:09:35 BOT
+-- Completed on 2015-06-01 02:46:50 BOT
 
 --
 -- PostgreSQL database dump complete

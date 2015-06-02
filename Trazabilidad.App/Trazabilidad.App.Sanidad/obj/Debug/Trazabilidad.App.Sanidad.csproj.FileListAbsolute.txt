@@ -31,3 +31,36 @@ C:\Users\luigi\Documents\Visual Studio 2012\Projects\Trazabilidad.App\Trazabilid
 C:\Users\luigi\Documents\Visual Studio 2012\Projects\Trazabilidad.App\Trazabilidad.App.Sanidad\obj\Debug\Trazabilidad.App.Sanidad.GUI.FormPalpacion.resources
 C:\Users\luigi\Documents\Visual Studio 2012\Projects\Trazabilidad.App\Trazabilidad.App.Sanidad\obj\Debug\Trazabilidad.App.Sanidad.GUI.FormPreñado.resources
 C:\Users\luigi\Documents\Visual Studio 2012\Projects\Trazabilidad.App\Trazabilidad.App.Sanidad\obj\Debug\Trazabilidad.App.Sanidad.GUI.FormVacuna.resources
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\bin\Debug\Trazabilidad.App.Sanidad.exe.config
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\obj\Debug\Trazabilidad.App.Sanidad.exe
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\obj\Debug\Trazabilidad.App.Sanidad.pdb
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\bin\Debug\Trazabilidad.App.Sanidad.exe
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\bin\Debug\Trazabilidad.App.Sanidad.pdb
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\bin\Debug\es\Trazabilidad.App.Sanidad.resources.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\bin\Debug\Trazabilidad.App.Datos.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\bin\Debug\Trazabilidad.App.Ganado.exe
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\bin\Debug\Npgsql.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\bin\Debug\Trazabilidad.App.Categorias.exe
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\bin\Debug\Mono.Security.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\bin\Debug\Trazabilidad.App.Datos.pdb
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\bin\Debug\Trazabilidad.App.Ganado.pdb
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\bin\Debug\Npgsql.xml
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\bin\Debug\Trazabilidad.App.Categorias.pdb
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\bin\Debug\es\Trazabilidad.App.Ganado.resources.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\bin\Debug\de\Npgsql.resources.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\bin\Debug\es\Npgsql.resources.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\bin\Debug\fi\Npgsql.resources.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\bin\Debug\fr\Npgsql.resources.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\bin\Debug\ja\Npgsql.resources.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\bin\Debug\es\Trazabilidad.App.Categorias.resources.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\obj\Debug\Trazabilidad.App.Sanidad.csprojResolveAssemblyReference.cache
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\obj\Debug\Trazabilidad.App.Sanidad.GUI.FormVacuna.resources
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\obj\Debug\Trazabilidad.App.Sanidad.GUI.FormPreñado.resources
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\obj\Debug\Trazabilidad.App.Sanidad.GUI.FormPalpacion.resources
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\obj\Debug\Trazabilidad.App.Sanidad.GUI.FormInseminacion.resources
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\obj\Debug\Trazabilidad.App.Sanidad.GUI.FormSanidadLista.resources
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\obj\Debug\Trazabilidad.App.Sanidad.Properties.Resources.resources
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\obj\Debug\Trazabilidad.App.Sanidad.GUI.FormSanidadLista.es.resources
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\obj\Debug\Trazabilidad.App.Sanidad.csproj.GenerateResource.Cache
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Sanidad\obj\Debug\es\Trazabilidad.App.Sanidad.resources.dll

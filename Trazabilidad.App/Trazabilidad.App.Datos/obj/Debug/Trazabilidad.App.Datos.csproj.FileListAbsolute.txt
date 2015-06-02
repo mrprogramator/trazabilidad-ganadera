@@ -17,3 +17,22 @@ C:\Users\luigi\Documents\Visual Studio 2012\Projects\Trazabilidad.App\Trazabilid
 C:\Users\luigi\Documents\Visual Studio 2012\Projects\Trazabilidad.App\Trazabilidad.App.Datos\obj\Debug\Trazabilidad.App.Datos.dll
 C:\Users\luigi\Documents\Visual Studio 2012\Projects\Trazabilidad.App\Trazabilidad.App.Datos\obj\Debug\Trazabilidad.App.Datos.pdb
 C:\Users\luigi\Documents\Visual Studio 2012\Projects\Trazabilidad.App\Trazabilidad.App.Datos\obj\Debug\Trazabilidad.App.Datos.csprojResolveAssemblyReference.cache
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Datos\bin\Debug\Trazabilidad.App.Datos.dll.config
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Datos\bin\Debug\Trazabilidad.App.Datos.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Datos\bin\Debug\Trazabilidad.App.Datos.pdb
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Datos\bin\Debug\EntityFramework.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Datos\bin\Debug\Mono.Security.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Datos\bin\Debug\Npgsql.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Datos\bin\Debug\EntityFramework.xml
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Datos\bin\Debug\Npgsql.xml
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Datos\bin\Debug\de\Npgsql.resources.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Datos\bin\Debug\es\Npgsql.resources.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Datos\bin\Debug\fi\Npgsql.resources.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Datos\bin\Debug\fr\Npgsql.resources.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Datos\bin\Debug\ja\Npgsql.resources.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Datos\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Datos\obj\Debug\Trazabilidad.App.Datos.csprojResolveAssemblyReference.cache
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Datos\obj\Debug\Trazabilidad.App.Datos.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Datos\obj\Debug\Trazabilidad.App.Datos.pdb

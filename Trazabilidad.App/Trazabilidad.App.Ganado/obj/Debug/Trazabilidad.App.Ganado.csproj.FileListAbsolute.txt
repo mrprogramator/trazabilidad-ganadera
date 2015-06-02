@@ -26,3 +26,31 @@ C:\Users\luigi\Documents\Visual Studio 2012\Projects\Trazabilidad.App\Trazabilid
 C:\Users\luigi\Documents\Visual Studio 2012\Projects\Trazabilidad.App\Trazabilidad.App.Ganado\obj\Debug\Trazabilidad.App.Ganado.pdb
 C:\Users\luigi\Documents\Visual Studio 2012\Projects\Trazabilidad.App\Trazabilidad.App.Ganado\obj\Debug\Trazabilidad.App.Ganado.GUI.FormEntrada.resources
 C:\Users\luigi\Documents\Visual Studio 2012\Projects\Trazabilidad.App\Trazabilidad.App.Ganado\obj\Debug\Trazabilidad.App.Ganado.GUI.FormSalida.resources
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\bin\Debug\Trazabilidad.App.Ganado.exe.config
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\bin\Debug\Trazabilidad.App.Ganado.exe
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\bin\Debug\Trazabilidad.App.Ganado.pdb
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\bin\Debug\es\Trazabilidad.App.Ganado.resources.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\bin\Debug\Trazabilidad.App.Categorias.exe
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\bin\Debug\Trazabilidad.App.Datos.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\bin\Debug\Npgsql.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\bin\Debug\Mono.Security.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\bin\Debug\Trazabilidad.App.Categorias.pdb
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\bin\Debug\Trazabilidad.App.Datos.pdb
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\bin\Debug\Npgsql.xml
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\bin\Debug\es\Trazabilidad.App.Categorias.resources.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\bin\Debug\de\Npgsql.resources.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\bin\Debug\es\Npgsql.resources.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\bin\Debug\fi\Npgsql.resources.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\bin\Debug\fr\Npgsql.resources.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\bin\Debug\ja\Npgsql.resources.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\obj\Debug\Trazabilidad.App.Ganado.csprojResolveAssemblyReference.cache
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\obj\Debug\Trazabilidad.App.Ganado.GUI.FormEntrada.resources
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\obj\Debug\Trazabilidad.App.Ganado.GUI.FormGanadoLista.resources
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\obj\Debug\Trazabilidad.App.Ganado.GUI.FormSalida.resources
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\obj\Debug\Trazabilidad.App.Ganado.Properties.Resources.resources
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\obj\Debug\Trazabilidad.App.Ganado.GUI.FormGanadoLista.es.resources
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\obj\Debug\Trazabilidad.App.Ganado.csproj.GenerateResource.Cache
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\obj\Debug\es\Trazabilidad.App.Ganado.resources.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\obj\Debug\Trazabilidad.App.Ganado.exe
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Ganado\obj\Debug\Trazabilidad.App.Ganado.pdb

@@ -8,7 +8,7 @@ namespace Trazabilidad.App.Datos
 {
     public class Constants
     {
-        public const String SERVER = "10.0.0.1";
+        public const String SERVER = "localhost";
          
         public const String PORT = "5432";
 

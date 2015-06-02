@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCategoria));
             this.LayoutMain = new System.Windows.Forms.TableLayoutPanel();
             this.LayoutMiddle = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_Descripcion = new System.Windows.Forms.Label();
@@ -50,6 +51,9 @@
             // 
             // LayoutMain
             // 
+            this.LayoutMain.BackColor = System.Drawing.Color.Transparent;
+            this.LayoutMain.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LayoutMain.BackgroundImage")));
+            this.LayoutMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.LayoutMain.ColumnCount = 1;
             this.LayoutMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.LayoutMain.Controls.Add(this.LayoutMiddle, 0, 1);
@@ -159,6 +163,7 @@
             // radioBtn_Hembra
             // 
             this.radioBtn_Hembra.AutoSize = true;
+            this.radioBtn_Hembra.BackColor = System.Drawing.Color.White;
             this.radioBtn_Hembra.Checked = true;
             this.radioBtn_Hembra.Location = new System.Drawing.Point(3, 3);
             this.radioBtn_Hembra.Name = "radioBtn_Hembra";
@@ -166,7 +171,7 @@
             this.radioBtn_Hembra.TabIndex = 0;
             this.radioBtn_Hembra.TabStop = true;
             this.radioBtn_Hembra.Text = "Hembra";
-            this.radioBtn_Hembra.UseVisualStyleBackColor = true;
+            this.radioBtn_Hembra.UseVisualStyleBackColor = false;
             // 
             // radioBtn_Macho
             // 
@@ -209,22 +214,30 @@
             // btn_Guardar
             // 
             this.btn_Guardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
+            this.btn_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Guardar.ForeColor = System.Drawing.Color.White;
             this.btn_Guardar.Location = new System.Drawing.Point(249, 3);
             this.btn_Guardar.Name = "btn_Guardar";
             this.btn_Guardar.Size = new System.Drawing.Size(75, 22);
             this.btn_Guardar.TabIndex = 0;
             this.btn_Guardar.Text = "Guardar";
-            this.btn_Guardar.UseVisualStyleBackColor = true;
+            this.btn_Guardar.UseVisualStyleBackColor = false;
             this.btn_Guardar.Click += new System.EventHandler(this.btn_Editar_Click);
             // 
             // btn_Cancelar
             // 
+            this.btn_Cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
+            this.btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cancelar.ForeColor = System.Drawing.Color.White;
             this.btn_Cancelar.Location = new System.Drawing.Point(330, 3);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(75, 22);
             this.btn_Cancelar.TabIndex = 1;
             this.btn_Cancelar.Text = "Cancelar";
-            this.btn_Cancelar.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.UseVisualStyleBackColor = false;
             this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
             // FormCategoria
@@ -232,6 +245,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(414, 278);
             this.Controls.Add(this.LayoutMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;

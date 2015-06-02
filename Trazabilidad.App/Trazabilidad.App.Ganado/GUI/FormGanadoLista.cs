@@ -81,5 +81,10 @@ namespace Trazabilidad.App.Ganado.GUI
             FactoriaAplicaciones<VendidoItemListener>.GetInstance().GetAplicacion().SetAll();
             MessageBox.Show("Los cambios han sido guardados","Mensaje",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
         }
+
+        private void buttonSalir_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

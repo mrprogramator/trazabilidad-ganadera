@@ -27,3 +27,8 @@ C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Start\obj\De
 C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Start\obj\Debug\Trazabilidad.App.Start.csproj.GenerateResource.Cache
 C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Start\obj\Debug\Trazabilidad.App.Start.exe
 C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Start\obj\Debug\Trazabilidad.App.Start.pdb
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Start\bin\Debug\Trazabilidad.App.Reportes.exe
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Start\bin\Debug\Select.Pdf.dll
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Start\bin\Debug\Trazabilidad.App.Reportes.pdb
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Start\bin\Debug\Select.Pdf.xml
+C:\Projects\trazabilidad-ganadera\Trazabilidad.App\Trazabilidad.App.Start\bin\Debug\es\Trazabilidad.App.Reportes.resources.dll

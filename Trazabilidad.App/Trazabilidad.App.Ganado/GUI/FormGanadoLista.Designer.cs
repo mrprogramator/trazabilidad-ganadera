@@ -48,6 +48,7 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.buttonSalir = new System.Windows.Forms.Button();
             this.LayoutMain.SuspendLayout();
             this.LayoutTopTittle.SuspendLayout();
             this.LayoutTopButtons.SuspendLayout();
@@ -65,6 +66,7 @@
             // 
             // LayoutMain
             // 
+            this.LayoutMain.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.LayoutMain, "LayoutMain");
             this.LayoutMain.Controls.Add(this.LayoutTopTittle, 0, 0);
             this.LayoutMain.Controls.Add(this.LayoutTopButtons, 0, 1);
@@ -75,17 +77,20 @@
             // LayoutTopTittle
             // 
             resources.ApplyResources(this.LayoutTopTittle, "LayoutTopTittle");
-            this.LayoutTopTittle.Controls.Add(this.lbl_Titulo, 0, 0);
+            this.LayoutTopTittle.Controls.Add(this.buttonSalir, 0, 0);
+            this.LayoutTopTittle.Controls.Add(this.lbl_Titulo, 1, 0);
             this.LayoutTopTittle.Name = "LayoutTopTittle";
             // 
             // lbl_Titulo
             // 
             resources.ApplyResources(this.lbl_Titulo, "lbl_Titulo");
+            this.lbl_Titulo.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Titulo.Name = "lbl_Titulo";
             // 
             // LayoutTopButtons
             // 
             resources.ApplyResources(this.LayoutTopButtons, "LayoutTopButtons");
+            this.LayoutTopButtons.BackColor = System.Drawing.Color.Transparent;
             this.LayoutTopButtons.Controls.Add(this.btn_Actualizar, 1, 0);
             this.LayoutTopButtons.Controls.Add(this.btn_Nuevo, 0, 0);
             this.LayoutTopButtons.Name = "LayoutTopButtons";
@@ -93,15 +98,19 @@
             // btn_Actualizar
             // 
             resources.ApplyResources(this.btn_Actualizar, "btn_Actualizar");
+            this.btn_Actualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
+            this.btn_Actualizar.ForeColor = System.Drawing.Color.White;
             this.btn_Actualizar.Name = "btn_Actualizar";
-            this.btn_Actualizar.UseVisualStyleBackColor = true;
+            this.btn_Actualizar.UseVisualStyleBackColor = false;
             this.btn_Actualizar.Click += new System.EventHandler(this.btn_Actualizar_Click);
             // 
             // btn_Nuevo
             // 
+            this.btn_Nuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
             resources.ApplyResources(this.btn_Nuevo, "btn_Nuevo");
+            this.btn_Nuevo.ForeColor = System.Drawing.Color.White;
             this.btn_Nuevo.Name = "btn_Nuevo";
-            this.btn_Nuevo.UseVisualStyleBackColor = true;
+            this.btn_Nuevo.UseVisualStyleBackColor = false;
             this.btn_Nuevo.Click += new System.EventHandler(this.btn_Nuevo_Click);
             // 
             // LayoutBottomButtons
@@ -115,22 +124,28 @@
             // btn_Guardar
             // 
             resources.ApplyResources(this.btn_Guardar, "btn_Guardar");
+            this.btn_Guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
+            this.btn_Guardar.ForeColor = System.Drawing.Color.Transparent;
             this.btn_Guardar.Name = "btn_Guardar";
-            this.btn_Guardar.UseVisualStyleBackColor = true;
+            this.btn_Guardar.UseVisualStyleBackColor = false;
             this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click);
             // 
             // btn_Eliminar
             // 
+            this.btn_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
             resources.ApplyResources(this.btn_Eliminar, "btn_Eliminar");
+            this.btn_Eliminar.ForeColor = System.Drawing.Color.White;
             this.btn_Eliminar.Name = "btn_Eliminar";
-            this.btn_Eliminar.UseVisualStyleBackColor = true;
+            this.btn_Eliminar.UseVisualStyleBackColor = false;
             this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
             // 
             // btn_Editar
             // 
             resources.ApplyResources(this.btn_Editar, "btn_Editar");
+            this.btn_Editar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
+            this.btn_Editar.ForeColor = System.Drawing.Color.White;
             this.btn_Editar.Name = "btn_Editar";
-            this.btn_Editar.UseVisualStyleBackColor = true;
+            this.btn_Editar.UseVisualStyleBackColor = false;
             this.btn_Editar.Click += new System.EventHandler(this.btn_Editar_Click);
             // 
             // tabControl1
@@ -159,6 +174,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -177,6 +193,7 @@
             this.dataGridView2.AllowUserToDeleteRows = false;
             resources.ApplyResources(this.dataGridView2, "dataGridView2");
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
@@ -195,6 +212,7 @@
             this.dataGridView3.AllowUserToDeleteRows = false;
             resources.ApplyResources(this.dataGridView3, "dataGridView3");
             this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
@@ -213,16 +231,28 @@
             this.dataGridView4.AllowUserToDeleteRows = false;
             resources.ApplyResources(this.dataGridView4, "dataGridView4");
             this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView4.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.ReadOnly = true;
             this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             // 
+            // buttonSalir
+            // 
+            resources.ApplyResources(this.buttonSalir, "buttonSalir");
+            this.buttonSalir.BackColor = System.Drawing.Color.Transparent;
+            this.buttonSalir.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonSalir.Name = "buttonSalir";
+            this.buttonSalir.UseVisualStyleBackColor = false;
+            this.buttonSalir.Click += new System.EventHandler(this.buttonSalir_Click);
+            // 
             // FormGanadoLista
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.LayoutMain);
+            this.DoubleBuffered = true;
             this.Name = "FormGanadoLista";
             this.Activated += new System.EventHandler(this.FormListaGanado_Load);
             this.Load += new System.EventHandler(this.FormListaGanado_Load);
@@ -266,5 +296,6 @@
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.Button buttonSalir;
     }
 }

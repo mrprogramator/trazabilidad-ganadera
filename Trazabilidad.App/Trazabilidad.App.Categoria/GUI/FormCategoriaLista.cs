@@ -61,5 +61,10 @@ namespace Trazabilidad.App.Categorias.GUI
             Categorias.Aplicacion.CategoriaPropertyListenerAdaptador.GetInstance().SetAll();
             MessageBox.Show("Los cambios han sido guardados", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
+
+        private void buttonSalir_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

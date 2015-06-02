@@ -37,9 +37,10 @@ namespace Trazabilidad.App.Ganado.GUI
 
         public void LoadFormGanado(Object BovinoItemListener, ComboBox categoria, DateTimePicker fecha_entrada, RichTextBox obs, RadioButton nac, RadioButton compra, TextBox precio, ComboBox padre, ComboBox madre)
         {
-            var selected = (BovinoItemListener as GanadoItemListener).Id;
             if (BovinoItemListener is NacidoItemListener)
             {
+                var selected = (BovinoItemListener as GanadoItemListener).Id;
+
                 var _PropertyListener = FactoriaAplicaciones<NacidoItemListener>.GetInstance().GetAplicacion().GetAll();
                 var bovino = _PropertyListener.Find(b => b.Id.Equals(selected));
                 
@@ -53,6 +54,8 @@ namespace Trazabilidad.App.Ganado.GUI
 
             if (BovinoItemListener is CompradoItemListener)
             {
+                var selected = (BovinoItemListener as GanadoItemListener).Id;
+
                 var _PropertyListener2 = FactoriaAplicaciones<CompradoItemListener>.GetInstance().GetAplicacion().GetAll();
                 var bovino2 = _PropertyListener2.Find(b => b.Id.Equals(selected));
 

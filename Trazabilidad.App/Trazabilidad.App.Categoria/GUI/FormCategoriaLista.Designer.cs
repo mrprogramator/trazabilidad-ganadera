@@ -40,6 +40,7 @@
             this.btn_Guardar = new System.Windows.Forms.Button();
             this.btn_Eliminar = new System.Windows.Forms.Button();
             this.btn_Editar = new System.Windows.Forms.Button();
+            this.buttonSalir = new System.Windows.Forms.Button();
             this.LayoutMain.SuspendLayout();
             this.LayoutTopTittle.SuspendLayout();
             this.LayoutTopButtons.SuspendLayout();
@@ -59,7 +60,8 @@
             // LayoutTopTittle
             // 
             resources.ApplyResources(this.LayoutTopTittle, "LayoutTopTittle");
-            this.LayoutTopTittle.Controls.Add(this.lbl_Titulo, 0, 0);
+            this.LayoutTopTittle.Controls.Add(this.buttonSalir, 0, 0);
+            this.LayoutTopTittle.Controls.Add(this.lbl_Titulo, 1, 0);
             this.LayoutTopTittle.Name = "LayoutTopTittle";
             // 
             // lbl_Titulo
@@ -77,15 +79,19 @@
             // btn_Actualizar
             // 
             resources.ApplyResources(this.btn_Actualizar, "btn_Actualizar");
+            this.btn_Actualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
+            this.btn_Actualizar.ForeColor = System.Drawing.Color.White;
             this.btn_Actualizar.Name = "btn_Actualizar";
-            this.btn_Actualizar.UseVisualStyleBackColor = true;
+            this.btn_Actualizar.UseVisualStyleBackColor = false;
             this.btn_Actualizar.Click += new System.EventHandler(this.btn_Actualizar_Click);
             // 
             // btn_Nuevo
             // 
+            this.btn_Nuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
             resources.ApplyResources(this.btn_Nuevo, "btn_Nuevo");
+            this.btn_Nuevo.ForeColor = System.Drawing.Color.White;
             this.btn_Nuevo.Name = "btn_Nuevo";
-            this.btn_Nuevo.UseVisualStyleBackColor = true;
+            this.btn_Nuevo.UseVisualStyleBackColor = false;
             this.btn_Nuevo.Click += new System.EventHandler(this.btn_Nuevo_Click);
             // 
             // dataGV_Categoria
@@ -96,6 +102,7 @@
             this.dataGV_Categoria.AllowUserToResizeRows = false;
             resources.ApplyResources(this.dataGV_Categoria, "dataGV_Categoria");
             this.dataGV_Categoria.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGV_Categoria.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGV_Categoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGV_Categoria.MultiSelect = false;
             this.dataGV_Categoria.Name = "dataGV_Categoria";
@@ -113,28 +120,44 @@
             // btn_Guardar
             // 
             resources.ApplyResources(this.btn_Guardar, "btn_Guardar");
+            this.btn_Guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
+            this.btn_Guardar.ForeColor = System.Drawing.Color.White;
             this.btn_Guardar.Name = "btn_Guardar";
-            this.btn_Guardar.UseVisualStyleBackColor = true;
+            this.btn_Guardar.UseVisualStyleBackColor = false;
             this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click);
             // 
             // btn_Eliminar
             // 
+            this.btn_Eliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
             resources.ApplyResources(this.btn_Eliminar, "btn_Eliminar");
+            this.btn_Eliminar.ForeColor = System.Drawing.Color.White;
             this.btn_Eliminar.Name = "btn_Eliminar";
-            this.btn_Eliminar.UseVisualStyleBackColor = true;
+            this.btn_Eliminar.UseVisualStyleBackColor = false;
             this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
             // 
             // btn_Editar
             // 
             resources.ApplyResources(this.btn_Editar, "btn_Editar");
+            this.btn_Editar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
+            this.btn_Editar.ForeColor = System.Drawing.Color.White;
             this.btn_Editar.Name = "btn_Editar";
-            this.btn_Editar.UseVisualStyleBackColor = true;
+            this.btn_Editar.UseVisualStyleBackColor = false;
             this.btn_Editar.Click += new System.EventHandler(this.btn_Editar_Click);
+            // 
+            // buttonSalir
+            // 
+            resources.ApplyResources(this.buttonSalir, "buttonSalir");
+            this.buttonSalir.BackColor = System.Drawing.Color.Transparent;
+            this.buttonSalir.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonSalir.Name = "buttonSalir";
+            this.buttonSalir.UseVisualStyleBackColor = false;
+            this.buttonSalir.Click += new System.EventHandler(this.buttonSalir_Click);
             // 
             // FormCategoriaLista
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.LayoutMain);
             this.Name = "FormCategoriaLista";
             this.Activated += new System.EventHandler(this.FormListaCategoria_Load);
@@ -163,5 +186,6 @@
         private System.Windows.Forms.Button btn_Editar;
         private System.Windows.Forms.TableLayoutPanel LayoutTopTittle;
         private System.Windows.Forms.Label lbl_Titulo;
+        private System.Windows.Forms.Button buttonSalir;
     }
 }

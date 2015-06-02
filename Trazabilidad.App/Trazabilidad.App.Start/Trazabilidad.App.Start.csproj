@@ -86,6 +86,10 @@
       <Project>{152fbace-5180-4d13-ba3e-825f1e0863e8}</Project>
       <Name>Trazabilidad.App.Ganado</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Trazabilidad.App.Reportes\Trazabilidad.App.Reportes.csproj">
+      <Project>{2edfa6ca-b8fe-41f8-8107-1be3eb77b01d}</Project>
+      <Name>Trazabilidad.App.Reportes</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Trazabilidad.App.Sanidad\Trazabilidad.App.Sanidad.csproj">
       <Project>{457096a1-1276-49a3-822c-8e21a2dffc72}</Project>
       <Name>Trazabilidad.App.Sanidad</Name>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPreñado));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBoxEntrada = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -56,6 +57,9 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tableLayoutPanel1.BackgroundImage")));
+            this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.groupBoxEntrada, 0, 1);
@@ -82,7 +86,7 @@
             this.groupBoxEntrada.Controls.Add(this.tableLayoutPanel2);
             this.groupBoxEntrada.Location = new System.Drawing.Point(3, 36);
             this.groupBoxEntrada.Name = "groupBoxEntrada";
-            this.groupBoxEntrada.Size = new System.Drawing.Size(521, 134);
+            this.groupBoxEntrada.Size = new System.Drawing.Size(521, 133);
             this.groupBoxEntrada.TabIndex = 1;
             this.groupBoxEntrada.TabStop = false;
             this.groupBoxEntrada.Text = "Sanidad";
@@ -105,7 +109,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(503, 109);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(503, 108);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // label1
@@ -136,7 +140,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBoxObservaciones.Location = new System.Drawing.Point(87, 29);
             this.richTextBoxObservaciones.Name = "richTextBoxObservaciones";
-            this.richTextBoxObservaciones.Size = new System.Drawing.Size(413, 77);
+            this.richTextBoxObservaciones.Size = new System.Drawing.Size(413, 76);
             this.richTextBoxObservaciones.TabIndex = 6;
             this.richTextBoxObservaciones.Text = "";
             // 
@@ -159,32 +163,40 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel6.Controls.Add(this.btnCancelar, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.btnGuardar, 0, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 317);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 316);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(521, 32);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(521, 33);
             this.tableLayoutPanel6.TabIndex = 4;
             // 
             // btnCancelar
             // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Location = new System.Drawing.Point(443, 3);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 1;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
             this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Location = new System.Drawing.Point(362, 3);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 2;
             this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // tableLayoutPanel7
@@ -226,7 +238,7 @@
             // 
             this.groupBoxBovino.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxBovino.Controls.Add(this.LayoutBovino);
-            this.groupBoxBovino.Location = new System.Drawing.Point(3, 212);
+            this.groupBoxBovino.Location = new System.Drawing.Point(3, 211);
             this.groupBoxBovino.Name = "groupBoxBovino";
             this.groupBoxBovino.Size = new System.Drawing.Size(521, 63);
             this.groupBoxBovino.TabIndex = 6;
@@ -272,6 +284,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(527, 352);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormPreñado";

@@ -124,7 +124,7 @@ namespace Trazabilidad.App.Reportes.Aplicacion
             text1 = new SelectPdf.PdfTextElement(50, 510, "Ganado Vendido", subfont);
             page.Add(text1);
 
-            text1 = new SelectPdf.PdfTextElement(500, 510, muertos.Count.ToString(), subfont);
+            text1 = new SelectPdf.PdfTextElement(500, 510, vendidos.Count.ToString(), subfont);
 
             page.Add(text1);
 
@@ -139,7 +139,7 @@ namespace Trazabilidad.App.Reportes.Aplicacion
             str.Clear();
             text2.Text = "";
 
-            foreach (var bovino in muertos)
+            foreach (var bovino in vendidos)
             {
                 str.AppendFormat("{0}\t\t\t\t\t{1}\n", bovino.Id, bovino.Categoria.Nombre);
                 text2 = new SelectPdf.PdfTextElement(50, 580, str.ToString(), plain);

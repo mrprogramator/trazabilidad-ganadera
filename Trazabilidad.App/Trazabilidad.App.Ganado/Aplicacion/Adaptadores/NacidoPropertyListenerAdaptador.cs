@@ -31,6 +31,7 @@ namespace Trazabilidad.App.Ganado.Aplicacion
                 foreach (var bovino in lista_nacidos)
                 {
                     var myItem = GetItemListener(bovino);
+                    myItem.GetCode(myItem);
                     items.Add(myItem);
                 }
 
@@ -73,15 +74,30 @@ namespace Trazabilidad.App.Ganado.Aplicacion
             _ItemListener.Categoria = _Bovino.Categoria.Nombre;
 
             _ItemListener.Sexo = _Bovino.Categoria.Sexo;
+            var lista = FactoriaServiciosLocales<Bovino>.GetInstance().GetServicio().GetAll();
 
             if (_Bovino.Padre != null)
             {
-                _ItemListener.Padre = _Bovino.Padre.Id;
+                var padre = lista.FirstOrDefault(b => b.Id.Equals(_Bovino.Padre.Id));
+                
+                var padreItem = new NacidoItemListener() 
+                { 
+                    Id = padre.Id,
+                    Categoria = padre.Categoria.Nombre
+                };
+
+                _ItemListener.Padre = padreItem.GetCode(padreItem).Codigo;
             }
 
             if (_Bovino.Madre != null)
             {
-                _ItemListener.Madre = _Bovino.Madre.Id;
+                var madre = lista.FirstOrDefault(b => b.Id.Equals(_Bovino.Madre.Id));
+                var madreItem = new NacidoItemListener()
+                {
+                    Id = madre.Id,
+                    Categoria = madre.Categoria.Nombre
+                }; 
+                _ItemListener.Madre = madreItem.GetCode(madreItem).Codigo;
             }
 
             if (_Bovino.Nacimiento.Fecha != null)
@@ -115,19 +131,21 @@ namespace Trazabilidad.App.Ganado.Aplicacion
                 Descripcion = cat.Descripcion
             };
 
-            if (item.Padre != 0)
+            if (item.Padre != null)
             {
+                var padre_id = Convert.ToInt32(item.Padre.Substring(3));
                 var lista_ganado = FactoriaServiciosLocales<Bovino>.GetInstance().GetServicio().GetAll();
-                var padre = lista_ganado.FirstOrDefault(b => b.Id.Equals(item.Padre));
+                var padre = lista_ganado.FirstOrDefault(b => b.Id.Equals(padre_id));
                 
                 if (padre != null)
                     _Bovino.Padre = padre;
             }
 
-            if (item.Madre != 0)
+            if (item.Madre != null)
             {
+                var madre_id = Convert.ToInt32(item.Madre.Substring(3));
                 var lista_ganado = FactoriaServiciosLocales<Bovino>.GetInstance().GetServicio().GetAll();
-                var madre = lista_ganado.FirstOrDefault(b => b.Id.Equals(item.Madre));
+                var madre = lista_ganado.FirstOrDefault(b => b.Id.Equals(madre_id));
 
                 if (madre != null)
                     _Bovino.Madre = madre;
@@ -162,17 +180,19 @@ namespace Trazabilidad.App.Ganado.Aplicacion
                 Descripcion = cat.Descripcion
             };
 
-            if (item.Padre != 0)
+            if (item.Padre != null)
             {
+                var padre_id = Convert.ToInt32(item.Padre.Substring(3));
                 var lista_ganado = FactoriaServiciosLocales<Bovino>.GetInstance().GetServicio().GetAll();
-                var padre = lista_ganado.Find(b => b.Id.Equals(item.Padre));
+                var padre = lista_ganado.Find(b => b.Id.Equals(padre_id));
                 bovinoNacido.Padre = padre;
             }
 
-            if (item.Madre != 0)
+            if (item.Madre != null)
             {
+                var madre_id = Convert.ToInt32(item.Padre.Substring(3));
                 var lista_ganado = FactoriaServiciosLocales<Bovino>.GetInstance().GetServicio().GetAll();
-                var madre = lista_ganado.Find(b => b.Id.Equals(item.Madre));
+                var madre = lista_ganado.Find(b => b.Id.Equals(madre_id));
                 bovinoNacido.Madre = madre;
             }
 

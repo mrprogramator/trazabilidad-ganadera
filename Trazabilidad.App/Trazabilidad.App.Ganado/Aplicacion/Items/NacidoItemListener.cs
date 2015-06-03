@@ -9,9 +9,12 @@ namespace Trazabilidad.App.Ganado.Aplicacion
 {
     public class NacidoItemListener : GanadoItemListener
     {
-        public Int32 Padre { get; set; }
-        public Int32 Madre { get; set; }
+        public String Padre { get; set; }
+
+        public String Madre { get; set; }
+        
         public DateTime Entrada { get; set; }
+        
         public String Observaciones { get; set; }
     }
 }

@@ -32,7 +32,7 @@ namespace Trazabilidad.App.Reportes.Aplicacion
             var ant = new intervalItem();
 
             Traza.Sort((a, b) => a.Id - b.Id);
-
+            
             foreach (var traza in Traza)
             {
                 if (traza.Bovino.Id.Equals(bovinoId))

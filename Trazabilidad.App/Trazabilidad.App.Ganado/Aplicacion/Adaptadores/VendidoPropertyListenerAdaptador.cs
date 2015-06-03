@@ -31,6 +31,7 @@ namespace Trazabilidad.App.Ganado.Aplicacion
                 foreach (var bovino in lista_vendidos)
                 {
                     var myItem = GetItemListener(bovino);
+                    myItem.GetCode(myItem);
                     items.Add(myItem);
                 }
 

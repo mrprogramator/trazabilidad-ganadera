@@ -31,6 +31,7 @@ namespace Trazabilidad.App.Ganado.Aplicacion
                 foreach (var bovino in lista_ganado)
                 {
                     var myItem = GetItemListener(bovino);
+                    myItem.GetCode(myItem);
                     items.Add(myItem);
                 }
 
@@ -49,8 +50,6 @@ namespace Trazabilidad.App.Ganado.Aplicacion
                 var bovino = GetItemListener(item);
                 lista_ganado.Add(bovino);
             }
-            //Console.WriteLine(_PropertyListenerGanado);
-            //servicio.SetAll();
         }
         
         private static GanadoItemListener GetItemListener(Bovino _Bovino)

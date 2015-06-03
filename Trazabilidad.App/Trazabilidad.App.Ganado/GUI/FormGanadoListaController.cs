@@ -144,8 +144,10 @@ namespace Trazabilidad.App.Ganado.GUI
             var bl = new BindingList<T>(PropertyListener);
             var source = new BindingSource(bl, null);
             dataGV_ListaGanado.DataSource = source;
-
-            dataGV_ListaGanado.Columns["Id"].DisplayIndex = 0;
+            
+            dataGV_ListaGanado.Columns["Id"].Visible = false;
+            dataGV_ListaGanado.Columns["Codigo"].HeaderText = "Código";
+            dataGV_ListaGanado.Columns["Codigo"].DisplayIndex = 0;
             dataGV_ListaGanado.Columns["Categoria"].DisplayIndex = 1;
             dataGV_ListaGanado.Columns["Sexo"].DisplayIndex = 2;
         }

@@ -178,7 +178,7 @@ namespace Trazabilidad.App.Reporte.GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var selectedId = comboBox1.SelectedItem;
+            var selectedId = Convert.ToInt32(comboBox1.SelectedItem.ToString().Substring(3));
             new ReporteTraza().makeReport((Int32)selectedId);
             webBrowser1.Visible = true;
             LayoutMain.BackgroundImageLayout = ImageLayout.None;

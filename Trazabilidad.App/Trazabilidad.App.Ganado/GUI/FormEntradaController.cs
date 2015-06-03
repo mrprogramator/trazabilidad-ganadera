@@ -76,7 +76,7 @@ namespace Trazabilidad.App.Ganado.GUI
                 var _PropertyListener = FactoriaAplicaciones<GanadoItemListener>.GetInstance().GetAplicacion().GetAll();
                 foreach (var bovino in _PropertyListener)
                 {
-                    _ComboBox.Items.Add(bovino.Id);
+                    _ComboBox.Items.Add(bovino.Codigo);
                 }
             }
 
@@ -152,18 +152,20 @@ namespace Trazabilidad.App.Ganado.GUI
                     Categoria = categoria.SelectedItem.ToString()
                 };
 
+                item.GetCode(item);
+
                 var padre_id = padre.SelectedItem;
 
                 if (padre_id != null)
                 {
-                    item.Padre = (Int32)padre_id;
+                    item.Padre = (String)padre_id;
                 }
 
                 var madre_id = madre.SelectedItem;
 
                 if (madre_id != null)
                 {
-                    item.Madre = (Int32)madre_id;
+                    item.Madre = (String)madre_id;
                 }
 
                 item.Entrada = dateTP_Fecha.Value;
@@ -269,14 +271,15 @@ namespace Trazabilidad.App.Ganado.GUI
 
                 if (padre_id != null)
                 {
-                    item.Padre = (Int32)padre_id;
+
+                    item.Padre = (String)padre_id;
                 }
 
                 var madre_id = madre.SelectedItem;
 
                 if (madre_id != null)
                 {
-                    item.Madre = (Int32)madre_id;
+                    item.Madre = (String)madre_id;
                 }
 
                 item.Entrada = dateTP_Fecha.Value;
@@ -358,7 +361,7 @@ namespace Trazabilidad.App.Ganado.GUI
             foreach (var bovino in _PropertyListener)
             {                
                 if (bovino.Categoria.Equals("toro"))
-                    _ComboBox.Items.Add(bovino.Id);
+                    _ComboBox.Items.Add(bovino.Codigo);
             }
         }
 
@@ -370,7 +373,7 @@ namespace Trazabilidad.App.Ganado.GUI
             foreach (var bovino in _PropertyListener)
             {
                 if (bovino.Categoria.Equals("toro") && bovino.Id != (tipoBovino as GanadoItemListener).Id)
-                    _ComboBox.Items.Add(bovino.Id);
+                    _ComboBox.Items.Add(bovino.Codigo);
             }
         }
 
@@ -381,7 +384,7 @@ namespace Trazabilidad.App.Ganado.GUI
             foreach (var bovino in _PropertyListener)
             {
                 if (bovino.Categoria.Equals("vaca"))
-                    _ComboBox.Items.Add(bovino.Id);
+                    _ComboBox.Items.Add(bovino.Codigo);
             }
         }
 
@@ -392,7 +395,7 @@ namespace Trazabilidad.App.Ganado.GUI
             foreach (var bovino in _PropertyListener)
             {
                 if (bovino.Categoria.Equals("vaca") && bovino.Id != (tipoBovino as GanadoItemListener).Id)
-                    _ComboBox.Items.Add(bovino.Id);
+                    _ComboBox.Items.Add(bovino.Codigo);
             }
         }
     }

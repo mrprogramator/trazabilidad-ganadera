@@ -63,6 +63,9 @@ namespace Trazabilidad.App.Ganado.Aplicacion
 
         private MuertoItemListener GetItemListener(BovinoMuerto _Bovino)
         {
+            if (_Bovino.Muerte == null)
+                return null;
+
             var _ItemListener = new MuertoItemListener();
 
             _ItemListener.Id = _Bovino.Id;

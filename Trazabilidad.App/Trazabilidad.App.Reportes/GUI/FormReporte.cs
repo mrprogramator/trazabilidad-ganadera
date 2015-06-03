@@ -102,23 +102,32 @@ namespace Trazabilidad.App.Reporte.GUI
 
         private void conteoGeneralToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            label1.Visible = false;
+            comboBox1.Visible = false;
+            button1.Visible = false;
             new ReporteGanado().makeReport();
             webBrowser1.Visible = true;
-            //LayoutMain.BackgroundImageLayout = ImageLayout.None;
+            LayoutMain.BackgroundImageLayout = ImageLayout.None;
             webBrowser1.Navigate("C:\\Projects\\trazabilidad-ganadera\\Trazabilidad.App\\Trazabilidad.App.Start\\bin\\Debug\\ReporteGanado.pdf");
         }
 
         private void conteoPorCategoríaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            label1.Visible = false;
+            comboBox1.Visible = false;
+            button1.Visible = false;
             new ReporteCategorias().makeReport();
             webBrowser1.Visible = true;
-            //LayoutMain.BackgroundImageLayout = ImageLayout.None;
+            LayoutMain.BackgroundImageLayout = ImageLayout.None;
             webBrowser1.Navigate("C:\\Projects\\trazabilidad-ganadera\\Trazabilidad.App\\Trazabilidad.App.Start\\bin\\Debug\\ReporteCategorias.pdf");
 
         }
 
         private void inseminaciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            label1.Visible = false;
+            comboBox1.Visible = false;
+            button1.Visible = false;
             new ReporteInseminacion().makeReport();
             webBrowser1.Visible = true;
             LayoutMain.BackgroundImageLayout = ImageLayout.None;
@@ -127,6 +136,9 @@ namespace Trazabilidad.App.Reporte.GUI
 
         private void palpaciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            label1.Visible = false;
+            comboBox1.Visible = false;
+            button1.Visible = false;
             new ReportePalpacion().makeReport();
             webBrowser1.Visible = true;
             LayoutMain.BackgroundImageLayout = ImageLayout.None;
@@ -135,6 +147,9 @@ namespace Trazabilidad.App.Reporte.GUI
 
         private void preñadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            label1.Visible = false;
+            comboBox1.Visible = false;
+            button1.Visible = false;
             new ReportePreñado().makeReport();
             webBrowser1.Visible = true;
             LayoutMain.BackgroundImageLayout = ImageLayout.None;
@@ -144,10 +159,30 @@ namespace Trazabilidad.App.Reporte.GUI
 
         private void vacunasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            label1.Visible = false;
+            comboBox1.Visible = false;
+            button1.Visible = false;
             new ReporteVacuna().makeReport();
             webBrowser1.Visible = true;
             LayoutMain.BackgroundImageLayout = ImageLayout.None;
             webBrowser1.Navigate("C:\\Projects\\trazabilidad-ganadera\\Trazabilidad.App\\Trazabilidad.App.Start\\bin\\Debug\\ReporteVacuna.pdf");
+        }
+
+        private void trazabilidadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            label1.Visible = true;
+            comboBox1.Visible = true;
+            button1.Visible = true;
+            Ganado.GUI.FormEntradaController.GetInstance().LoadComboBoxGanado(comboBox1, null);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var selectedId = comboBox1.SelectedItem;
+            new ReporteTraza().makeReport((Int32)selectedId);
+            webBrowser1.Visible = true;
+            LayoutMain.BackgroundImageLayout = ImageLayout.None;
+            webBrowser1.Navigate("C:\\Projects\\trazabilidad-ganadera\\Trazabilidad.App\\Trazabilidad.App.Start\\bin\\Debug\\ReporteTraza" + selectedId.ToString() + ".pdf");
         }
 
     }

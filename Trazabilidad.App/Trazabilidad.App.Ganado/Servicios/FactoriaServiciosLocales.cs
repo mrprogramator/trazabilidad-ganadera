@@ -31,6 +31,13 @@ namespace Trazabilidad.App.Ganado.Servicios
             var bd = BaseDeDatos.GetInstance();
             IAdaptador<T> servicio;
 
+            if (typeof(T) == typeof(Traza))
+            {
+                var x = new TrazaAdaptadorBaseDeDatos(bd);
+                servicio = (IAdaptador<T>)x;
+                return servicio;
+            }
+
             if (typeof(T) == typeof(Bovino))
             {
                 var x = new BovinoAdaptadorBaseDeDatos(bd);

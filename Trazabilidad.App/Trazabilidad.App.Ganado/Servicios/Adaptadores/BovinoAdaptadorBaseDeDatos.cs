@@ -21,6 +21,10 @@ namespace Trazabilidad.App.Ganado.Servicios.Adaptadores
         {
             this.bd = bd;
         }
+        public Lista<Bovino> Generate()
+        {
+            return _BovinoLista;
+        }
 
         public Lista<Bovino> GetAll()
         {
@@ -52,8 +56,6 @@ namespace Trazabilidad.App.Ganado.Servicios.Adaptadores
                 var row = DataRowGanado(bovino,dt);
                 dt.Rows.Add(row);
             }
-
-            //bd.SetData(dt, "bovino");
         }
 
         private Bovino DataRowGanado(DataRow row)

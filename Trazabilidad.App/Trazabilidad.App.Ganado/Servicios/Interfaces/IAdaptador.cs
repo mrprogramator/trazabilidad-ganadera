@@ -11,6 +11,7 @@ namespace Trazabilidad.App.Ganado.Servicios.Interfaces
     public interface IAdaptador<T>
     {
         Lista<T> GetAll();
+        Lista<T> Generate();
         void SetAll();
     }
 }

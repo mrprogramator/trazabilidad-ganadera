@@ -13,6 +13,7 @@ namespace Trazabilidad.App.Ganado.GUI
 {
     public partial class FormGanadoLista : Form
     {
+        
         public FormGanadoLista()
         {
             InitializeComponent();
@@ -79,6 +80,7 @@ namespace Trazabilidad.App.Ganado.GUI
             FactoriaAplicaciones<CompradoItemListener>.GetInstance().GetAplicacion().SetAll();
             FactoriaAplicaciones<MuertoItemListener>.GetInstance().GetAplicacion().SetAll();
             FactoriaAplicaciones<VendidoItemListener>.GetInstance().GetAplicacion().SetAll();
+            FactoriaAplicaciones<TrazaItemListener>.GetInstance().GetAplicacion().SetAll();
             MessageBox.Show("Los cambios han sido guardados","Mensaje",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
         }
 

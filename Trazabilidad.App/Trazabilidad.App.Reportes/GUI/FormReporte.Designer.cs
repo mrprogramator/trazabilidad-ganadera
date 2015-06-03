@@ -44,9 +44,15 @@
             this.vacunasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoríaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.conteoPorCategoríaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trazabilidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.LayoutMain.SuspendLayout();
             this.LayoutTopTittle.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LayoutMain
@@ -54,7 +60,8 @@
             this.LayoutMain.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.LayoutMain, "LayoutMain");
             this.LayoutMain.Controls.Add(this.LayoutTopTittle, 0, 0);
-            this.LayoutMain.Controls.Add(this.webBrowser1, 0, 1);
+            this.LayoutMain.Controls.Add(this.webBrowser1, 0, 2);
+            this.LayoutMain.Controls.Add(this.tableLayoutPanel1, 0, 1);
             this.LayoutMain.Name = "LayoutMain";
             // 
             // LayoutTopTittle
@@ -96,7 +103,8 @@
             // ganadoToolStripMenuItem
             // 
             this.ganadoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.conteoGeneralToolStripMenuItem});
+            this.conteoGeneralToolStripMenuItem,
+            this.trazabilidadToolStripMenuItem});
             this.ganadoToolStripMenuItem.Name = "ganadoToolStripMenuItem";
             resources.ApplyResources(this.ganadoToolStripMenuItem, "ganadoToolStripMenuItem");
             // 
@@ -153,6 +161,43 @@
             resources.ApplyResources(this.conteoPorCategoríaToolStripMenuItem, "conteoPorCategoríaToolStripMenuItem");
             this.conteoPorCategoríaToolStripMenuItem.Click += new System.EventHandler(this.conteoPorCategoríaToolStripMenuItem_Click);
             // 
+            // trazabilidadToolStripMenuItem
+            // 
+            this.trazabilidadToolStripMenuItem.Name = "trazabilidadToolStripMenuItem";
+            resources.ApplyResources(this.trazabilidadToolStripMenuItem, "trazabilidadToolStripMenuItem");
+            this.trazabilidadToolStripMenuItem.Click += new System.EventHandler(this.trazabilidadToolStripMenuItem_Click);
+            // 
+            // tableLayoutPanel1
+            // 
+            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.comboBox1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button1, 2, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Name = "label1";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Sorted = true;
+            // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(100)))), ((int)(((byte)(40)))));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormReporte
             // 
             resources.ApplyResources(this, "$this");
@@ -171,6 +216,8 @@
             this.LayoutTopTittle.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,5 +240,10 @@
         private System.Windows.Forms.ToolStripMenuItem conteoPorCategoríaToolStripMenuItem;
         private System.Windows.Forms.Button buttonSalir;
         private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.ToolStripMenuItem trazabilidadToolStripMenuItem;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

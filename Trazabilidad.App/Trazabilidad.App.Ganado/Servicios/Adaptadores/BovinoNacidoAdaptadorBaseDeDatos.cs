@@ -22,6 +22,10 @@ namespace Trazabilidad.App.Ganado.Servicios.Adaptadores
             this.bd = bd;            
         }
 
+        public Lista<BovinoNacido> Generate()
+        {
+            return _BovinoNacidoLista;
+        }
         
         public Lista<BovinoNacido> GetAll()
         {

@@ -59,6 +59,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aplicacion\ReporteTraza.cs" />
     <Compile Include="Aplicacion\ReporteVacuna.cs" />
     <Compile Include="Aplicacion\ReportePreñado.cs" />
     <Compile Include="Aplicacion\ReportePalpacion.cs" />

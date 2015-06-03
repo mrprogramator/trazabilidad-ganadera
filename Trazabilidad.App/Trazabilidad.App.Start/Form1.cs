@@ -8,10 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Trazabilidad.App.Start
 {
     public partial class FormMain : Form
     {
+        private bool _dragging = false;
+        private Point _offset;
+        private Point _start_point = new Point(0, 0);
+
         public FormMain()
         {
             InitializeComponent();
@@ -54,6 +59,26 @@ namespace Trazabilidad.App.Start
         private void buttonReportes_Click(object sender, EventArgs e)
         {
             new Reporte.GUI.FormReporte().ShowDialog();
+        }
+
+        private void FormMain_MouseDown(object sender, MouseEventArgs e)
+        {
+            _dragging = true;  // _dragging is your variable flag
+            _start_point = new Point(e.X, e.Y);
+        }
+
+        private void FormMain_MouseUp(object sender, MouseEventArgs e)
+        {
+            _dragging = false;
+        }
+
+        private void FormMain_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (_dragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
+            }
         }
     }
 }

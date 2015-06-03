@@ -63,6 +63,9 @@ namespace Trazabilidad.App.Ganado.Aplicacion
 
         private VendidoItemListener GetItemListener(BovinoVendido _Bovino)
         {
+            if (_Bovino.Venta == null)
+                return null;
+
             var _ItemListener = new VendidoItemListener();
 
             _ItemListener.Id = _Bovino.Id;

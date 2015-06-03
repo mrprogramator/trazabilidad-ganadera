@@ -30,6 +30,13 @@ namespace Trazabilidad.App.Ganado.Aplicacion
         {
             IGanadoPropertyListenerAdaptador<T> servicio;
 
+            if (typeof(T) == typeof(TrazaItemListener))
+            {
+                var x = new TrazaPropertyListenerAdaptador();
+                servicio = (IGanadoPropertyListenerAdaptador<T>)x;
+                return servicio;
+            }
+
             if (typeof(T) == typeof(GanadoItemListener))
             {
                 var x = new GanadoPropertyListenerAdaptador();

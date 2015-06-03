@@ -134,6 +134,8 @@ namespace Trazabilidad.App.Ganado.GUI
         {
             var selected = LayoutTipoEntrada.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
 
+            var PropertyListenerTraza = FactoriaAplicaciones<TrazaItemListener>.GetInstance().GetAplicacion().GetAll();
+
             var PropertyListener = FactoriaAplicaciones<NacidoItemListener>.GetInstance().GetAplicacion().GetAll();
             var PropertyListener2 = FactoriaAplicaciones<CompradoItemListener>.GetInstance().GetAplicacion().GetAll();
 
@@ -177,6 +179,16 @@ namespace Trazabilidad.App.Ganado.GUI
 
                 PropertyListener.Add(item);
                 PropertyListenerGanado.Add(item);
+
+
+                var traza = new TrazaItemListener();
+
+                traza.Fecha = DateTime.Now;
+                traza.Bovino = newId;
+                traza.Categoria = categoria.SelectedItem.ToString();
+
+                PropertyListenerTraza.Add(traza);
+
             }
 
             else 
@@ -194,7 +206,7 @@ namespace Trazabilidad.App.Ganado.GUI
                 item.Entrada = dateTP_Fecha.Value;
 
                 item.Precio = Convert.ToDecimal(precio.Text);
-
+                                             
                 if (obs != null)
                 {
                     item.Observaciones = obs.Text;
@@ -206,6 +218,14 @@ namespace Trazabilidad.App.Ganado.GUI
 
                 PropertyListener2.Add(item);
                 PropertyListenerGanado.Add(item);
+
+                var traza = new TrazaItemListener();
+
+                traza.Fecha = DateTime.Now;
+                traza.Bovino = newId;
+                traza.Categoria = categoria.SelectedItem.ToString();
+
+                PropertyListenerTraza.Add(traza);
             }
 
             return true;
@@ -223,6 +243,7 @@ namespace Trazabilidad.App.Ganado.GUI
             {
                 var lista_bovinos = FactoriaAplicaciones<NacidoItemListener>.GetInstance().GetAplicacion().GetAll();
                 lista_bovinos.Remove(BovinoItemListener as NacidoItemListener);
+
             }
 
             if (BovinoItemListener is CompradoItemListener)
@@ -272,6 +293,16 @@ namespace Trazabilidad.App.Ganado.GUI
                 PropertyListener.Add(item);
 
                 PropertyListenerGanado.Add(item);
+
+                var PropertyListenerTraza = FactoriaAplicaciones<TrazaItemListener>.GetInstance().GetAplicacion().GetAll();
+                
+                var traza = new TrazaItemListener();
+
+                traza.Fecha = DateTime.Now;
+                traza.Bovino = item.Id;
+                traza.Categoria = categoria.SelectedItem.ToString();
+
+                PropertyListenerTraza.Add(traza);
             }
 
             else
@@ -299,6 +330,15 @@ namespace Trazabilidad.App.Ganado.GUI
                 item.Sexo = cat.Sexo;
                 PropertyListener.Add(item);
                 PropertyListenerGanado.Add(item);
+
+                var PropertyListenerTraza = FactoriaAplicaciones<TrazaItemListener>.GetInstance().GetAplicacion().GetAll();
+                var traza = new TrazaItemListener();
+
+                traza.Fecha = DateTime.Now;
+                traza.Bovino = item.Id;
+                traza.Categoria = categoria.SelectedItem.ToString();
+
+                PropertyListenerTraza.Add(traza);
             }
 
 

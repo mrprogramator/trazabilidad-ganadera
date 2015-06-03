@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Trazabilidad.App.Datos;
 using Trazabilidad.App.Sanidad.Dominio;
-
 namespace Trazabilidad.App.Sanidad.Servicios
 {
     public class FactoriaServiciosLocales<T> : IFactoriaServicios<T>

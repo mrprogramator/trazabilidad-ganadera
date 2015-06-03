@@ -44,9 +44,16 @@ namespace Trazabilidad.App.Reportes.Aplicacion
 
             var total = 0;
             var row = 200;
+            var lastname = new StringBuilder("vacuna");
+            var count = 0;
+
             foreach (var sanidad in Vacuna)
             {
-                var count = 0;
+                if (!sanidad.Nombre.Equals(lastname.ToString()))
+                {
+                    lastname = new StringBuilder(sanidad.Nombre);
+                    count++;
+                }
                 SelectPdf.PdfTextElement subtitle = new SelectPdf.PdfTextElement(50, 150, sanidad.Nombre, subfont);
                 page.Add(subtitle);
 
@@ -93,7 +100,7 @@ namespace Trazabilidad.App.Reportes.Aplicacion
             text = new SelectPdf.PdfTextElement(50, row+80, "Total Vacunas", subfont);
             page.Add(text);
 
-            text = new SelectPdf.PdfTextElement(500, row+80, Vacuna.Count.ToString(), subfont);
+            text = new SelectPdf.PdfTextElement(500, row+80, count.ToString(), subfont);
             page.Add(text);
 
             PdfTemplate template = doc.AddTemplate(doc.Pages[0].ClientRectangle);

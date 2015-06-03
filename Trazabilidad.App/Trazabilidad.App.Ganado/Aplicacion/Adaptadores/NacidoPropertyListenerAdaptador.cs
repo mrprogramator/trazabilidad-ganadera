@@ -64,7 +64,10 @@ namespace Trazabilidad.App.Ganado.Aplicacion
         private static NacidoItemListener GetItemListener(BovinoNacido _Bovino)
         {
             var _ItemListener = new NacidoItemListener();
-
+            
+            if (_Bovino.Nacimiento == null)
+                return null;
+            
             _ItemListener.Id = _Bovino.Id;
 
             _ItemListener.Categoria = _Bovino.Categoria.Nombre;

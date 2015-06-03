@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aplicacion\Adaptadores\TrazaPropertyListenerAdaptador.cs" />
     <Compile Include="Aplicacion\Items\CompradoItemListener.cs" />
     <Compile Include="Aplicacion\Adaptadores\CompradoPropertyListenerAdaptador.cs" />
     <Compile Include="Aplicacion\FactoriaAplicaciones.cs" />
@@ -52,6 +53,7 @@
     <Compile Include="Aplicacion\Interfaces\IGanadoPropertyListenerAdaptador.cs" />
     <Compile Include="Aplicacion\Adaptadores\MuertoPropertyListenerAdaptador.cs" />
     <Compile Include="Aplicacion\Items\NacidoItemListener.cs" />
+    <Compile Include="Aplicacion\Items\TrazaItemListener.cs" />
     <Compile Include="Aplicacion\Listas\GanadoPropertyListener.cs" />
     <Compile Include="Aplicacion\Adaptadores\GanadoPropertyListenerAdaptador.cs" />
     <Compile Include="Aplicacion\Items\MuertoItemListener.cs" />
@@ -68,6 +70,7 @@
     <Compile Include="Dominio\Muerte.cs" />
     <Compile Include="Dominio\Nacimiento.cs" />
     <Compile Include="Dominio\Salida.cs" />
+    <Compile Include="Dominio\Traza.cs" />
     <Compile Include="Dominio\Venta.cs" />
     <Compile Include="GUI\FormSalidaController.cs" />
     <Compile Include="GUI\FormEntrada.cs">
@@ -97,6 +100,7 @@
     <Compile Include="Servicios\Adaptadores\BovinoMuertoAdaptadorBaseDeDatos.cs" />
     <Compile Include="Servicios\Adaptadores\BovinoNacidoAdaptadorBaseDeDatos.cs" />
     <Compile Include="Servicios\Adaptadores\BovinoVendidoAdaptadorBaseDeDatos.cs" />
+    <Compile Include="Servicios\Adaptadores\TrazaAdaptadorBaseDeDatos.cs" />
     <Compile Include="Servicios\FactoriaServiciosLocales.cs" />
     <Compile Include="Servicios\Interfaces\IAdaptador.cs" />
     <Compile Include="Servicios\Interfaces\IFactoriaServicios.cs" />
